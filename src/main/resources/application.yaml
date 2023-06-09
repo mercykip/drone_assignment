@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    username: drone
+    url: jdbc:h2:mem:drone
+    driverClassName: org.h2.Driver
+    password: Drone@123
+  h2:
+    console:
+      enabled: 'true'
+      path: /h2-console
+      settings.trace: false
+      settings.web-allow-others: false
+ #     path: /h2-ui
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    show-sql: 'false'
+    hibernate:
+      ddl-auto: update
